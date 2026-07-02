@@ -31,6 +31,7 @@ export default function Formulas({ theme }) {
     <Section
       id="formulas"
       theme={theme}
+      icon="🧮"
       kicker="Fórmulas"
       title="Cómo se calcula cada indicador"
       subtitle="Todas se derivan de las tres variables base (VP, VG, CR) y de la línea base del proyecto (BAC, DTP, TT)."
@@ -51,6 +52,7 @@ export default function Formulas({ theme }) {
               {group.cards.map((card) => (
                 <div
                   key={card.abbr}
+                  className="evm-card-hover"
                   style={{
                     background: theme.surface,
                     border: `1px solid ${theme.border}`,

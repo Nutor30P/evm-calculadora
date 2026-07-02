@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   CartesianGrid,
   Line,
@@ -10,6 +10,7 @@ import {
   YAxis,
 } from "recharts";
 import { useColorScheme } from "./theme";
+import Confetti from "./components/Confetti";
 import {
   buildCurveData,
   buildInterpretation,
@@ -20,12 +21,15 @@ import {
   fmtMonths,
 } from "./evm";
 
+const FACE = { good: "🙂", neutral: "😐", bad: "🙁" };
+
 // ---- Small presentational pieces -----------------------------------------
 export function MetricCard({ label, value, tone, theme }) {
   const toneColor =
     tone === "good" ? theme.good : tone === "bad" ? theme.critical : theme.textPrimary;
   return (
     <div
+      className="evm-card-hover"
       style={{
         background: theme.surface,
         border: `1px solid ${theme.border}`,
@@ -37,7 +41,10 @@ export function MetricCard({ label, value, tone, theme }) {
         minWidth: 0,
       }}
     >
-      <span style={{ fontSize: 12, color: theme.textMuted, letterSpacing: 0.2 }}>{label}</span>
+      <span style={{ fontSize: 12, color: theme.textMuted, letterSpacing: 0.2, display: "flex", justifyContent: "space-between" }}>
+        {label}
+        <span aria-hidden="true">{FACE[tone] ?? FACE.neutral}</span>
+      </span>
       <span style={{ fontSize: 22, fontWeight: 600, color: toneColor, lineHeight: 1.1 }}>
         {value}
       </span>
@@ -60,16 +67,7 @@ export function InterpretationBadge({ text, tone, theme }) {
         padding: "10px 12px",
       }}
     >
-      <span
-        style={{
-          marginTop: 5,
-          width: 8,
-          height: 8,
-          minWidth: 8,
-          borderRadius: "50%",
-          background: border,
-        }}
-      />
+      <span style={{ fontSize: 15 }} aria-hidden="true">{FACE[tone] ?? FACE.neutral}</span>
       <span style={{ fontSize: 14, color: theme.textPrimary, lineHeight: 1.4 }}>{text}</span>
     </div>
   );
@@ -163,6 +161,14 @@ export default function EVMCalculator() {
 
   const remainingPlanned = dtp - tt;
 
+  const isGreat = idc !== null && ids !== null && idc >= 1 && ids >= 1;
+  const [burstKey, setBurstKey] = useState(0);
+  const wasGreat = useRef(false);
+  useEffect(() => {
+    if (isGreat && !wasGreat.current) setBurstKey((k) => k + 1);
+    wasGreat.current = isGreat;
+  }, [isGreat]);
+
   return (
     <div
       style={{
@@ -176,13 +182,19 @@ export default function EVMCalculator() {
         gap: 28,
       }}
     >
-      <div>
-        <h2 style={{ margin: 0, fontSize: 20, fontWeight: 600 }}>
-          Calculadora de Gestión del Valor Ganado (EVM)
+      <div style={{ position: "relative" }}>
+        {isGreat && <Confetti key={burstKey} />}
+        <h2 style={{ margin: 0, fontSize: 20, fontWeight: 600, display: "flex", alignItems: "center", gap: 8 }}>
+          🧮 Calculadora de Gestión del Valor Ganado (EVM)
         </h2>
         <p style={{ margin: "4px 0 0", fontSize: 13, color: theme.textSecondary }}>
           Ingresa los parámetros del proyecto para ver variaciones, índices y pronósticos en tiempo real.
         </p>
+        {isGreat && (
+          <p style={{ margin: "6px 0 0", fontSize: 13, color: theme.good, fontWeight: 600 }}>
+            🎉 ¡Este proyecto va muy bien: adelantado y dentro del presupuesto!
+          </p>
+        )}
       </div>
 
       <div

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const LINKS = [
   { href: "#introduccion", label: "Introducción" },
+  { href: "#simulador", label: "🧱 Simulador" },
   { href: "#conceptos", label: "Conceptos" },
   { href: "#formulas", label: "Fórmulas" },
   { href: "#interpretacion", label: "Interpretación" },
@@ -10,6 +11,23 @@ const LINKS = [
 ];
 
 export default function Nav({ theme }) {
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") return;
+    const sections = LINKS.map((l) => document.getElementById(l.href.slice(1))).filter(Boolean);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(`#${entry.target.id}`);
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <header
       style={{
@@ -41,24 +59,34 @@ export default function Nav({ theme }) {
             color: theme.textPrimary,
             textDecoration: "none",
             whiteSpace: "nowrap",
+            display: "flex",
+            alignItems: "center",
+            gap: 6,
           }}
         >
-          Valor Ganado (EVM)
+          🧱 Valor Ganado (EVM)
         </a>
         <nav style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
-          {LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              style={{
-                fontSize: 14,
-                color: theme.textSecondary,
-                textDecoration: "none",
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {LINKS.map((link) => {
+            const isActive = active === link.href;
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                style={{
+                  fontSize: 14,
+                  fontWeight: isActive ? 700 : 400,
+                  color: isActive ? theme.seriesPlanned : theme.textSecondary,
+                  textDecoration: "none",
+                  borderBottom: isActive ? `2px solid ${theme.seriesPlanned}` : "2px solid transparent",
+                  paddingBottom: 2,
+                  transition: "color 0.15s ease, border-color 0.15s ease",
+                }}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </nav>
       </div>
     </header>

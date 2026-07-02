@@ -33,6 +33,7 @@ export default function CaseStudy({ theme }) {
       id="caso-de-estudio"
       theme={theme}
       tone="surface"
+      icon="🏗️"
       kicker="Caso de estudio guiado"
       title={PROJECT.name}
       subtitle="Un corte de control a mitad de obra revela una historia distinta a la que cuenta el presupuesto por sí solo."

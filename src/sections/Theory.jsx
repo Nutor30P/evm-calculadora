@@ -34,6 +34,7 @@ export default function Theory({ theme }) {
     <Section
       id="introduccion"
       theme={theme}
+      icon="🧠"
       kicker="¿Qué problema resuelve?"
       title="El presupuesto solo no dice si el proyecto va bien"
       subtitle="Comparar lo gastado contra lo presupuestado ignora una pregunta clave: ¿cuánto trabajo se completó realmente con ese dinero?"

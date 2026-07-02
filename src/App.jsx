@@ -3,6 +3,7 @@ import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
 import Theory from './sections/Theory'
+import KidsSimulator from './sections/KidsSimulator'
 import Glossary from './sections/Glossary'
 import Formulas from './sections/Formulas'
 import Interpretation from './sections/Interpretation'
@@ -24,6 +25,7 @@ function App() {
       <Nav theme={theme} />
       <Hero theme={theme} />
       <Theory theme={theme} />
+      <KidsSimulator theme={theme} />
       <Glossary theme={theme} />
       <Formulas theme={theme} />
       <Interpretation theme={theme} />

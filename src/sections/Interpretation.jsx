@@ -1,6 +1,8 @@
 import React from "react";
 import Section from "../components/Section";
 
+const FACE = { good: "🙂", neutral: "😐", bad: "🙁" };
+
 const ROWS = [
   { indicator: "VC", condition: "> 0", tone: "good", label: "Favorable", text: "El trabajo entregado vale más de lo que costó (subejecución de costo)." },
   { indicator: "VC", condition: "= 0", tone: "neutral", label: "En línea", text: "El costo real coincide exactamente con el valor del trabajo entregado." },
@@ -27,6 +29,7 @@ export default function Interpretation({ theme }) {
       id="interpretacion"
       theme={theme}
       tone="surface"
+      icon="🚦"
       kicker="Interpretación"
       title="Qué significa cada resultado"
       subtitle="La misma regla aplica siempre: valores por encima de la referencia (0 o 1) son favorables; por debajo, desfavorables."
@@ -66,6 +69,7 @@ export default function Interpretation({ theme }) {
                 <td style={{ padding: "10px 16px", fontSize: 14, color: theme.textPrimary, borderBottom: `1px solid ${theme.border}` }}>
                   <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
                     <ToneDot tone={row.tone} theme={theme} />
+                    <span aria-hidden="true">{FACE[row.tone]}</span>
                     {row.label}
                   </span>
                 </td>
