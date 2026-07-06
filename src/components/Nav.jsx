@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 const LINKS = [
+  { href: "#video", label: "🎥 Video" },
   { href: "#introduccion", label: "Introducción" },
+  { href: "#infografia", label: "🗺️ Infografía" },
   { href: "#simulador", label: "🧱 Simulador" },
   { href: "#conceptos", label: "Conceptos" },
   { href: "#formulas", label: "Fórmulas" },
