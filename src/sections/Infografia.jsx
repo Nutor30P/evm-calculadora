@@ -167,7 +167,9 @@ export default function Infografia({ theme }) {
                 className="evm-card-hover"
                 style={{
                   background: theme.surface,
-                  border: `1px solid ${theme.border}`,
+                  borderLeft: `1px solid ${theme.border}`,
+                  borderRight: `1px solid ${theme.border}`,
+                  borderBottom: `1px solid ${theme.border}`,
                   borderTop: `4px solid ${c.fg}`,
                   borderRadius: 12,
                   padding: "18px 18px",
