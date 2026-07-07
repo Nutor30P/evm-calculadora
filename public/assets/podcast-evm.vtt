@@ -1,0 +1,217 @@
+WEBVTT
+
+1
+00:00:03.380 --> 00:00:09.400
+Bienvenido a este Micro podcast sobre el Analisis del Valor Ganado, también conocido como
+
+2
+00:00:09.400 --> 00:00:13.620
+Earned Value Management o EVM.
+
+3
+00:00:14.080 --> 00:00:20.220
+Son importantes, pero también un poco terni. ¿De verdad sirve para saber si un proyecto va bien?
+
+4
+00:00:21.060 --> 00:00:26.040
+Exactamente. Y si alguna vez te has preguntado cómo saber si un proyecto realmente avanza
+
+5
+00:00:26.040 --> 00:00:32.480
+bien, incluso cuando ya se ha gastado mucho dinero, queda. Porque lo vamos a explicar con
+
+6
+00:00:32.480 --> 00:00:38.060
+un ejemplo muy sencillo. Perfecto, porque siempre escucho hablar del Valor Ganado, pero
+
+7
+00:00:38.060 --> 00:00:42.220
+sinceramente parece complicado. ¿No vas a conversar cuánto dinero se ha ganado?
+
+8
+00:00:42.760 --> 00:00:48.160
+Esa es precisamente la duda que resuelve el Valor Ganado. Imagina que estás construyendo
+
+9
+00:00:48.160 --> 00:00:52.680
+una casa. Ok, ok, una casa. Eso ya suena más fácil entender.
+
+10
+00:00:53.360 --> 00:00:59.280
+Según el plan, para el día de hoy deberías haber construido el 50% de la obra.
+
+11
+00:00:59.280 --> 00:01:04.220
+Además, ya gastaste exactamente la mitad del presupuesto.
+
+12
+00:01:04.640 --> 00:01:08.800
+Entonces, a simple vista, pareciera que todo va perfecto, ¿no?
+
+13
+00:01:09.440 --> 00:01:15.160
+Así aparecen, pero cuando revisas el avance físico, descubres que en realidad solo has
+
+14
+00:01:15.160 --> 00:01:17.420
+construido el 40%.
+
+15
+00:01:17.420 --> 00:01:22.660
+Ah, entonces aunque el gasto parece correcto, el proyecto está atrasado.
+
+16
+00:01:23.900 --> 00:01:29.880
+Exacto, el dinero puede dar una impresión incompleta. Un control tradicional de presupuesto
+
+17
+00:01:29.880 --> 00:01:35.000
+te dice cuánto gastaste, pero no siempre te dice cuánto trabajo lograste con ese dinero.
+
+18
+00:01:35.280 --> 00:01:40.720
+Entonces, el Valor Ganado compara lo que debía hacerse con lo que realmente se hizo.
+
+19
+00:01:41.200 --> 00:01:47.700
+Tal cual, para hacerlo, utiliza tres datos claves. El primero es el Valor Planificado
+
+20
+00:01:47.700 --> 00:01:54.220
+o VP, que representa el trabajo que deberías estar terminando según el cronograma.
+
+21
+00:01:54.580 --> 00:01:58.620
+O sea, lo que el plan decía que ya deberíamos tener listo.
+
+22
+00:01:59.200 --> 00:02:06.660
+Correcto, el segundo valor es el Valor Ganado o VG, que corresponde al trabajo que realmente
+
+23
+00:02:06.660 --> 00:02:07.620
+ya se terminó.
+
+24
+00:02:07.920 --> 00:02:11.060
+Ese sería el avance real, expresado en valor.
+
+25
+00:02:12.460 --> 00:02:19.260
+Exactamente, y el tercero es el costo real o CR, que es el dinero que efectivamente
+
+26
+00:02:19.260 --> 00:02:20.280
+se ha gastado.
+
+27
+00:02:20.460 --> 00:02:25.500
+Entonces, tenemos lo planeado, lo logrado y lo gastado.
+
+28
+00:02:25.880 --> 00:02:31.560
+Muy bien resumido, con esas tres variables se pueden calcular indicadores que muestran
+
+29
+00:02:31.560 --> 00:02:32.900
+la salud del proyecto.
+
+30
+00:02:33.320 --> 00:02:36.400
+Y como sé, si el proyecto va bien o va mal.
+
+31
+00:02:36.400 --> 00:02:38.660
+Hay dos indicadores principales.
+
+32
+00:02:38.980 --> 00:02:43.720
+El primero es el índice desempeño del costo, conocido como IDC.
+
+33
+00:02:44.020 --> 00:02:45.420
+¿Y cómo lo interpreto?
+
+34
+00:02:46.300 --> 00:02:52.700
+Si el IDC es mayor que uno, significa que estás usando el presupuesto de forma eficiente.
+
+35
+00:02:53.280 --> 00:02:58.420
+Si es menor que uno, estás gastando más dinero del que deberías para el avance que tiene.
+
+36
+00:02:58.640 --> 00:03:03.660
+Bien, entonces el IDC me ayuda a entender si el dinero se está usando bien.
+
+37
+00:03:04.340 --> 00:03:10.760
+Exacto, el segundo indicador es el índice desempeño del cronograma o IDS.
+
+38
+00:03:10.860 --> 00:03:13.000
+¿Ese tiene que ver con el tiempo, cierto?
+
+39
+00:03:13.820 --> 00:03:18.220
+Así es, si el IDS es mayor que uno, vas adelantado.
+
+40
+00:03:19.100 --> 00:03:22.620
+Si es igual a uno, vas exactamente según lo planeado.
+
+41
+00:03:22.800 --> 00:03:26.140
+Y si es menor que uno, el proyecto está atrasado.
+
+42
+00:03:26.420 --> 00:03:27.940
+Ahora lo entiendo mucho mejor.
+
+43
+00:03:28.520 --> 00:03:31.140
+No se trata solamente de cuánto dinero se ha gastado,
+
+44
+00:03:31.140 --> 00:03:34.600
+sino de cuánto trabajo se logró con ese dinero.
+
+45
+00:03:35.380 --> 00:03:39.020
+Exactamente, esa es la gran ventaja del análisis del valor ganado.
+
+46
+00:03:39.500 --> 00:03:43.040
+Integra el alcance, tiempo y costo en un solo método.
+
+47
+00:03:43.380 --> 00:03:47.460
+¿Y eso permite detectar problemas antes de que sea demasiado tarde?
+
+48
+00:03:48.300 --> 00:03:53.200
+Así es, también ayudan a realizar pronósticos y tomar mejores decisiones
+
+49
+00:03:53.200 --> 00:03:56.180
+antes de que las desviaciones crezcan demasiado.
+
+50
+00:03:56.180 --> 00:04:00.980
+Entonces, si quiero controlar bien un proyecto, no basta con mirar el presupuesto.
+
+51
+00:04:01.420 --> 00:04:04.140
+También necesito revisar el avance real frente al plan.
+
+52
+00:04:05.620 --> 00:04:08.180
+Exactamente, gracias por escuchar este micropodcast.
+
+53
+00:04:09.080 --> 00:04:14.620
+Ahora ya sabes por qué el valor ganado es una de las herramientas más importantes en la gerencia de proyectos.
+
+54
+00:04:14.920 --> 00:04:16.960
+¿Ok? ¿Nos escuchamos en otro episodio?

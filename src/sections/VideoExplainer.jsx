@@ -137,10 +137,10 @@ export default function VideoExplainer({ theme }) {
       ) : (
         <PodcastPlayer
           theme={theme}
-          src={`${import.meta.env.BASE_URL}assets/video-evm.mp4`}
-          vttSrc={`${import.meta.env.BASE_URL}assets/subtitulos-evm.vtt`}
-          title="Análisis del Valor Ganado (EVM)"
-          subtitle="Episodio único · ~2 min · Español"
+          src={`${import.meta.env.BASE_URL}assets/podcast-evm.mp3`}
+          vttSrc={`${import.meta.env.BASE_URL}assets/podcast-evm.vtt`}
+          title="Micro podcast: Análisis del Valor Ganado"
+          subtitle="Episodio único · ~4 min · Español · Mezcla: Leonardo Estupiñán"
         />
       )}
     </Section>
