@@ -10,6 +10,8 @@ const LINKS = [
   { href: "#interpretacion", label: "Interpretación" },
   { href: "#calculadora", label: "Calculadora" },
   { href: "#caso-de-estudio", label: "Caso de estudio" },
+  { href: "#quiz", label: "🧠 Quiz" },
+  { href: "#ranking", label: "🏆 Top Ranks" },
 ];
 
 export default function Nav({ theme }) {

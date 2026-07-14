@@ -11,6 +11,8 @@ import Formulas from './sections/Formulas'
 import Interpretation from './sections/Interpretation'
 import CalculatorSection from './sections/CalculatorSection'
 import CaseStudy from './sections/CaseStudy'
+import Quiz from './sections/Quiz'
+import Ranking from './sections/Ranking'
 
 function App() {
   const { theme } = useColorScheme()
@@ -35,6 +37,8 @@ function App() {
       <Interpretation theme={theme} />
       <CalculatorSection theme={theme} />
       <CaseStudy theme={theme} />
+      <Quiz theme={theme} />
+      <Ranking theme={theme} />
       <Footer theme={theme} />
     </div>
   )
